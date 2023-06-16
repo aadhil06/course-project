@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navigation {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.course-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.course-item h2 {
+    margin-top: 0;
+}
+
+.course-item p {
+    margin: 5px 0;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ceafaf;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.pagination a:hover {
+    background-color: #555;
+}
+
+.empty-message {
+    text-align: center;
+    color: #555;
+}

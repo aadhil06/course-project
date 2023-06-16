@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Course</title>
+    <link rel="stylesheet" href="{% static 'css/courses/update_course.css' %}">
+
+</head>
+<body>
+    <h1>Update Course</h1>
+
+    <div class="form-container">
+        <form action="{% url 'update_course' course.id %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

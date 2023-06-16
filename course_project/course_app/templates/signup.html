@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email or Phone" name="email" id="email">
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Password" id="password1" name="password1">
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" id="password2" name="password2">
+        <button type="submit">Register</button>
+        <br><br><br>
+        <a href="{% url 'login' %}" > Already have an account ?</a>
+    </form>
+  </div>
+</body>
+</html>
+
