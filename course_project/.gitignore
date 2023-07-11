@@ -1,0 +1,27 @@
+# Ignore Django-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files (e.g., for Visual Studio Code)
+.vscode/
+
+# Ignore environment files (e.g., for virtualenv or pipenv)
+.env
+.venv
+.venv/
+
+# Ignore log files
+*.log
+
+# Ignore static files (only if you're using collectstatic for production)
+static/
+
+# Ignore media files (only if you're using user-uploaded files)
+media/

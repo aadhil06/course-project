@@ -8,8 +8,26 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from .models import *
 from .forms import *
+from django.core.cache import cache
+
 # Create your views here.
 
+def generate_data():
+    return "This is the generated data for caching."
+
+def my_view(request):
+    # Check if the data is already cached
+    cached_data = cache.get('my_view_data')
+    
+    if cached_data is not None:
+        # If cached data exists, retrieve it from the cache and return the response
+        return render(request, 'cached_view.html', {'data': cached_data})
+    
+    # If the data is not cached, generate it and store it in the cache
+    data = generate_data()
+    cache.set('my_view_data', data, 60)  # Cache the data for 60 seconds
+    
+    return render(request, 'my_view.html', {'data': data})
 
 # Register
 def user_signup(request):
